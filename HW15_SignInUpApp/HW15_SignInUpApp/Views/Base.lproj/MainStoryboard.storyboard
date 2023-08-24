@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--profile-->
+        <scene sceneID="7cy-gQ-0tH">
+            <objects>
+                <viewController id="ug2-z7-xRy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lti-8D-d30">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L9Z-Uf-ZQY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="profile" image="person.crop.circle.fill" catalog="system" id="CMw-Rf-XoH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zl0-C2-HYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-180"/>
+        </scene>
+        <!--App-->
+        <scene sceneID="m6E-QI-Tak">
+            <objects>
+                <viewController id="Mpm-L3-A7e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LsK-NK-3wc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4xM-b2-yew"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="App" image="chart.bar.doc.horizontal.fill" catalog="system" id="fTi-ad-8uv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFQ-Yi-55j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-787"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="m5c-8K-ety">
+            <objects>
+                <tabBarController id="Hv4-0U-HgN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yIi-II-lZD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mpm-L3-A7e" kind="relationship" relationship="viewControllers" id="9q0-m4-rDF"/>
+                        <segue destination="ug2-z7-xRy" kind="relationship" relationship="viewControllers" id="kIj-9l-Mgt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGu-gK-ipV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="-484"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
