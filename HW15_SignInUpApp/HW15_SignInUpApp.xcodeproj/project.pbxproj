@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24E5542A97F71D009EC083 /* SignInVC.swift */; };
 		FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880E4B2A975D60006AC1BC /* AppDelegate.swift */; };
 		FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880E4D2A975D60006AC1BC /* SceneDelegate.swift */; };
 		FA880E532A975D60006AC1BC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E512A975D60006AC1BC /* MainStoryboard.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA24E5542A97F71D009EC083 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		FA880E482A975D60006AC1BC /* HW15_SignInUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW15_SignInUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA880E4B2A975D60006AC1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA880E4D2A975D60006AC1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA24E5532A97F4B1009EC083 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA24E5542A97F71D009EC083 /* SignInVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FA880E3F2A975D60006AC1BC = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		FA880E4A2A975D60006AC1BC /* HW15_SignInUpApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA24E5532A97F4B1009EC083 /* Controllers */,
 				FA880E5F2A975E8F006AC1BC /* Views */,
 				FA880E542A975D63006AC1BC /* Assets.xcassets */,
 				FA880E592A975D63006AC1BC /* Info.plist */,
@@ -161,6 +172,7 @@
 			files = (
 				FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */,
 				FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */,
+				FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
