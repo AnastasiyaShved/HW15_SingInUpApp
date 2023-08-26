@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g3H-1p-W5f">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SignInVC" customModule="HW15_SignInUpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKx-Is-rBA">
-                                <rect key="frame" x="235.5" y="113" width="153.5" height="31"/>
+                                <rect key="frame" x="249.66666666666663" y="113" width="153.33333333333337" height="31"/>
                                 <color key="tintColor" red="0.56813666070000002" green="0.61431044810000002" blue="0.71606815219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Create new account"/>
@@ -26,38 +26,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyT-x1-pVG">
-                                <rect key="frame" x="25" y="781" width="364" height="31"/>
+                                <rect key="frame" x="25" y="811" width="378" height="31"/>
                                 <color key="tintColor" red="0.56813666070000002" green="0.61431044810000002" blue="0.71606815219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Sing In"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-Od-Gto">
-                                <rect key="frame" x="25" y="322.5" width="364" height="235"/>
+                                <rect key="frame" x="25" y="337.66666666666669" width="378" height="234.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SA-S0-jog">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="38.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                         <color key="textColor" red="0.91942329879999996" green="0.93329197460000002" blue="0.98540609140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-AK-c2g">
-                                        <rect key="frame" x="0.0" y="70.5" width="364" height="164.5"/>
+                                        <rect key="frame" x="0.0" y="70.333333333333329" width="378" height="164.33333333333337"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plese enter yuor name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1Y-Ee-Fuh">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5x9-mE-h8W">
-                                                <rect key="frame" x="0.0" y="105" width="364" height="59.5"/>
+                                                <rect key="frame" x="0.0" y="104.99999999999999" width="378" height="59.333333333333329"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plese enter yuor password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLU-dU-h3T">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error with email password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hee-YM-iMz">
-                                                        <rect key="frame" x="0.0" y="39" width="364" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="39" width="378" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g3H-1p-W5f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ySM-Ve-Cwh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

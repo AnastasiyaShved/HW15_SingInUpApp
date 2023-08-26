@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateAccaountVC: UIViewController {
+class CreateAccaountVC: BaseViewController {
 
     
     @IBOutlet weak var emailTF: UITextField!
@@ -35,28 +35,30 @@ class CreateAccaountVC: UIViewController {
         strongPasswordIndView.forEach { view in
             view.alpha = 0.2
         }
-        startKeyboardObserver ()
-
+        hideKeyboardWhenTappedAround()
+        startKeyboardObserver()
     }
     
-    
-    
-    
-    
-    
-    private func startKeyboardObserver () {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    private func startKeyboardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
-            guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-                return
-            }
-            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        
+        let contentInsets = UIEdgeInsets(
+            top: 0.0,
+            left: 0.0,
+            bottom: keyboardSize.height,
+            right: 0.0
+        )
+        
         scrolView.contentInset = contentInsets
         scrolView.scrollIndicatorInsets = contentInsets
-        }
+    }
         
     @objc private func keyboardWillHide() {
             let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
