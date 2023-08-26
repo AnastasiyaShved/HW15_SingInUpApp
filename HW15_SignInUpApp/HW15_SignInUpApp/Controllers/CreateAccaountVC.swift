@@ -40,7 +40,8 @@ class CreateAccaountVC: BaseViewController {
     }
     
     private func startKeyboardObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
@@ -49,12 +50,7 @@ class CreateAccaountVC: BaseViewController {
             return
         }
         
-        let contentInsets = UIEdgeInsets(
-            top: 0.0,
-            left: 0.0,
-            bottom: keyboardSize.height,
-            right: 0.0
-        )
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
         
         scrolView.contentInset = contentInsets
         scrolView.scrollIndicatorInsets = contentInsets
