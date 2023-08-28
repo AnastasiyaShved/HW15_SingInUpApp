@@ -18,6 +18,7 @@
 		FA880E622A976059006AC1BC /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E612A976059006AC1BC /* SignInStoryboard.storyboard */; };
 		FA880E642A97663D006AC1BC /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E632A97663D006AC1BC /* SignUpStoryboard.storyboard */; };
 		FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */; };
+		FA8D70AD2A9D52EE00FFDD69 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70AC2A9D52EE00FFDD69 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FA880E612A976059006AC1BC /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		FA880E632A97663D006AC1BC /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
+		FA8D70AC2A9D52EE00FFDD69 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		FA880E4A2A975D60006AC1BC /* HW15_SignInUpApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA8D70AB2A9D52C000FFDD69 /* Models */,
 				FA4EB2A32A98E607007CD829 /* Extentions */,
 				FA24E5532A97F4B1009EC083 /* Controllers */,
 				FA880E5F2A975E8F006AC1BC /* Views */,
@@ -120,6 +123,14 @@
 				FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA8D70AB2A9D52C000FFDD69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D70AC2A9D52EE00FFDD69 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4EB2A52A9AA7C3007CD829 /* UIViewControllerExt.swift in Sources */,
+				FA8D70AD2A9D52EE00FFDD69 /* UserModel.swift in Sources */,
 				FA24E5572A981032009EC083 /* CreateAccaountVC.swift in Sources */,
 				FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */,
 				FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */,

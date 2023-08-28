@@ -9,10 +9,10 @@ import UIKit
 
 class CreateAccaountVC: BaseViewController {
 
-    
+    //MARK: - Property -
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var errorEmailLbl: UILabel!
-    
+
     @IBOutlet weak var nameTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
@@ -28,13 +28,15 @@ class CreateAccaountVC: BaseViewController {
 
     @IBOutlet weak var scrolView: UIScrollView!
 
-    private var isValidEmail = false
-    private var isConfirnPassword = false
-    private var passwordStrength: PasswordStrength = .veryWeak
+    //MARK: - private prorety -
+    private var isValidEmail = false { didSet {updateContinieBtnState() } }
+    private var isConfirnPassword = false { didSet {updateContinieBtnState() } }
+    private var passwordStrength: PasswordStrength = .veryWeak { didSet {updateContinieBtnState() } }
+    private var secureBtnState = false
     
+    private var confirnPassSecureBtnState = false
     
-    
-    
+    //MARK: - life circle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,7 @@ class CreateAccaountVC: BaseViewController {
         startKeyboardObserver()
     }
     
+    //MARK: - actions -
     @IBAction func emailTextField(_ sender: UITextField) {
         if let email = sender.text,
            !email.isEmpty,
@@ -65,9 +68,8 @@ class CreateAccaountVC: BaseViewController {
             passwordStrength = .veryWeak
         }
         errorPassLbl.isHidden = passwordStrength != .veryWeak
-//        setupStrongIndicatorsView()
+        setupStrongIndicatorsView()
     }
-    
     
     @IBAction func confirnPasswordTextField(_ sender: UITextField) {
         if let confirnPassWordTex = sender.text,
@@ -81,20 +83,50 @@ class CreateAccaountVC: BaseViewController {
         errorConfirnPasswordLbl.isHidden = isConfirnPassword
     }
     
+    @IBAction func tabSecureBtn(_ sender: UIButton) {
+        passwordTF.isSecureTextEntry = secureBtnState
+        secureBtnState.toggle()
+    }
     
-//    private func setupStrongIndicatorsView() {
-//        strongPasswordIndView.enumerated().forEach { view in
-//
-//        }
-//    }
+    @IBAction func tabConfinrSecureBtn(_ sender: UIButton) {
+        comfirnPasswordTF.isSecureTextEntry = confirnPassSecureBtnState
+        confirnPassSecureBtnState.toggle()
+    }
+    
+// не работает возврат по  кнопке
+    @IBAction func signInAction() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func continueAct() {
+        if let email = emailTF.text,
+           let pass = passwordTF.text {
+            let userModel = UserModel(name: nameTF.text, email: email, pass: pass)
+            
+        }
+    }
     
     
+    //MARK: - private funcs -
+    private func setupStrongIndicatorsView() {
+        strongPasswordIndView.enumerated().forEach { index, view in
+            if index <= (passwordStrength.rawValue - 1) {
+                view.alpha = 1
+            } else {
+                view.alpha = 0.2
+            }
+
+        }
+    }
     
+    private func updateContinieBtnState() {
+        continueBtn.isEnabled = isValidEmail && isConfirnPassword && passwordStrength  != .veryWeak
+    }
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification  , object: nil)
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
