@@ -17,6 +17,7 @@
 		FA880E582A975D63006AC1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E562A975D63006AC1BC /* LaunchScreen.storyboard */; };
 		FA880E622A976059006AC1BC /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E612A976059006AC1BC /* SignInStoryboard.storyboard */; };
 		FA880E642A97663D006AC1BC /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA880E632A97663D006AC1BC /* SignUpStoryboard.storyboard */; };
+		FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA880E592A975D63006AC1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA880E612A976059006AC1BC /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		FA880E632A97663D006AC1BC /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 				FA4EB2A32A98E607007CD829 /* Extentions */,
 				FA24E5532A97F4B1009EC083 /* Controllers */,
 				FA880E5F2A975E8F006AC1BC /* Views */,
-				FA880E542A975D63006AC1BC /* Assets.xcassets */,
+				FA8D70A82A9D05F600FFDD69 /* Services */,
 				FA880E592A975D63006AC1BC /* Info.plist */,
+				FA880E542A975D63006AC1BC /* Assets.xcassets */,
 				FA880E602A975EA3006AC1BC /* AppDeligate */,
 			);
 			path = HW15_SignInUpApp;
@@ -109,6 +112,14 @@
 				FA880E4D2A975D60006AC1BC /* SceneDelegate.swift */,
 			);
 			path = AppDeligate;
+			sourceTree = "<group>";
+		};
+		FA8D70A82A9D05F600FFDD69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			files = (
 				FA4EB2A52A9AA7C3007CD829 /* UIViewControllerExt.swift in Sources */,
 				FA24E5572A981032009EC083 /* CreateAccaountVC.swift in Sources */,
+				FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */,
 				FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */,
 				FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */,
 				FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */,

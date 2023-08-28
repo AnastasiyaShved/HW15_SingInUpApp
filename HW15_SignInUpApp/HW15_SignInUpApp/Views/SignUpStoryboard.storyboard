@@ -53,6 +53,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="emailTextField:" destination="Y6W-OH-hqX" eventType="editingChanged" id="7cH-j3-3gf"/>
+                                                                        </connections>
                                                                     </textField>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: bad email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4i-db-TaX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="0.0"/>
@@ -95,7 +98,10 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1J-tB-teJ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                        <connections>
+                                                                            <action selector="passwordTextField:" destination="Y6W-OH-hqX" eventType="editingChanged" id="6Jy-i4-m6L"/>
+                                                                        </connections>
                                                                     </textField>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: weak password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skN-si-zuR">
                                                                         <rect key="frame" x="0.0" y="37" width="270" height="0.0"/>
@@ -132,8 +138,9 @@
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your  password must be a minimum of 8 characters and contain one capital letter, one lowercase letter and one number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24d-8r-Hx1">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24d-8r-Hx1">
                                                                 <rect key="frame" x="0.0" y="93.5" width="270" height="81.5"/>
+                                                                <string key="text">Your  password must be a minimum of 8 characters and contain one capital letter, one lowercase letter and one number and one symbol.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -144,7 +151,10 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter confirn password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zwf-LV-V5e">
                                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                        <connections>
+                                                                            <action selector="confirnPasswordTextField:" destination="Y6W-OH-hqX" eventType="editingChanged" id="kou-ae-q0Y"/>
+                                                                        </connections>
                                                                     </textField>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: not confirmed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar5-L2-Xds">
                                                                         <rect key="frame" x="0.0" y="42" width="270" height="0.0"/>

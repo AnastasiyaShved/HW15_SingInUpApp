@@ -27,6 +27,12 @@ class CreateAccaountVC: BaseViewController {
     @IBOutlet weak var continueBtn: UIButton!
 
     @IBOutlet weak var scrolView: UIScrollView!
+
+    private var isValidEmail = false
+    private var isConfirnPassword = false
+    private var passwordStrength: PasswordStrength = .veryWeak
+    
+    
     
     
     override func viewDidLoad() {
@@ -38,6 +44,52 @@ class CreateAccaountVC: BaseViewController {
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
     }
+    
+    @IBAction func emailTextField(_ sender: UITextField) {
+        if let email = sender.text,
+           !email.isEmpty,
+           VerificationService.isValidEmail(email: email){
+            isValidEmail = true
+        } else {
+            isValidEmail = false
+           
+        }
+        errorEmailLbl.isHidden = isValidEmail
+    }
+    
+    @IBAction func passwordTextField(_ sender: UITextField) {
+        if let passText = sender.text,
+           !passText.isEmpty {
+            passwordStrength = VerificationService.isValidPassword(pass: passText)
+        } else {
+            passwordStrength = .veryWeak
+        }
+        errorPassLbl.isHidden = passwordStrength != .veryWeak
+//        setupStrongIndicatorsView()
+    }
+    
+    
+    @IBAction func confirnPasswordTextField(_ sender: UITextField) {
+        if let confirnPassWordTex = sender.text,
+           !confirnPassWordTex.isEmpty,
+           let passwordText = passwordTF.text,
+           !passwordText.isEmpty {
+            isConfirnPassword = VerificationService.isPassConfirn(pass1: confirnPassWordTex, pass2: passwordText)
+        } else {
+            isConfirnPassword = false
+        }
+        errorConfirnPasswordLbl.isHidden = isConfirnPassword
+    }
+    
+    
+//    private func setupStrongIndicatorsView() {
+//        strongPasswordIndView.enumerated().forEach { view in
+//
+//        }
+//    }
+    
+    
+    
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
