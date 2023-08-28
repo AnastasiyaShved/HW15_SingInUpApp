@@ -102,7 +102,7 @@ class CreateAccaountVC: BaseViewController {
         if let email = emailTF.text,
            let pass = passwordTF.text {
             let userModel = UserModel(name: nameTF.text, email: email, pass: pass)
-            
+            performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
     }
     
@@ -147,9 +147,9 @@ class CreateAccaountVC: BaseViewController {
         }
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            guard let destVC = segue.destination as? VerificationsVC,
-//                  let userModel = sender as? UserModel else { return }
-//            destVC.userModel = userModel
-//        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let destVC = segue.destination as? VerificationsVC,
+                  let userModel = sender as? UserModel else { return }
+            destVC.userModel = userModel
+        }
 }
