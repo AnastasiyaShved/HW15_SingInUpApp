@@ -9,10 +9,10 @@ import UIKit
 
 class VerificationsVC: BaseViewController {
 
+   
     var userModel: UserModel?
     let randomInt = Int.random(in: 100000 ... 999999)
-    
-  
+    var sleepTime = 3
     
     @IBOutlet weak var InfoTextLbl: UILabel!
     @IBOutlet weak var codeTF: UITextField!
@@ -20,26 +20,31 @@ class VerificationsVC: BaseViewController {
     @IBOutlet weak var cenetrConstraint: NSLayoutConstraint!
     
     
-   
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
        setupUI()
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
     }
     
     
-    
     @IBAction func codeTFAction(_ sender: UITextField) {
         errorCodeLbl.isHidden = true
         guard let text = sender.text, !text.isEmpty, text == randomInt.description else {
             errorCodeLbl.isHidden = false
+            sender.isUserInteractionEnabled = false
+            errorCodeLbl.text = "Error code. Please wait \(sleepTime) seconds"
+                        
+            let dispatcAfter = DispatchTimeInterval.seconds(sleepTime)
+            let deadline = DispatchTime.now() + dispatcAfter
+            DispatchQueue.main.asyncAfter(deadline: deadline) {
+            sender.isUserInteractionEnabled = true
+            self.errorCodeLbl.isHidden = true
+            self.sleepTime *= 2
+            }
             return
         }
+        performSegue(withIdentifier: "goToWelcomeScreen", sender: nil)
     }
     
     
@@ -70,14 +75,8 @@ class VerificationsVC: BaseViewController {
     
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        guard let destVC = segue.destination as? WelcomVC else {return}
+            destVC.userModel = userModel
+        }
 }

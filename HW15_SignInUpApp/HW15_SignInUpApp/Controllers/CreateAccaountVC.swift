@@ -93,10 +93,12 @@ class CreateAccaountVC: BaseViewController {
         confirnPassSecureBtnState.toggle()
     }
     
-// не работает возврат по  кнопке
-    @IBAction func signInAction() {
+
+    
+    @IBAction func signInTab() {
         navigationController?.popToRootViewController(animated: true)
     }
+    
     
     @IBAction func continueAct() {
         if let email = emailTF.text,
@@ -146,7 +148,7 @@ class CreateAccaountVC: BaseViewController {
             scrolView.scrollIndicatorInsets = contentInsets
         }
     
-    
+    //MARK: - novigation -
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let destVC = segue.destination as? VerificationsVC,
                   let userModel = sender as? UserModel else { return }
