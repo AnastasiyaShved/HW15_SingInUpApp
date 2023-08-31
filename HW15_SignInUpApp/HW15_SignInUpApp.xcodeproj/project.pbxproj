@@ -21,6 +21,8 @@
 		FA8D70AD2A9D52EE00FFDD69 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70AC2A9D52EE00FFDD69 /* UserModel.swift */; };
 		FA8D70AF2A9D572800FFDD69 /* VerificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70AE2A9D572800FFDD69 /* VerificationsVC.swift */; };
 		FA8D70B12A9D70F400FFDD69 /* WelcomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */; };
+		FAAAD7BF2AA05D15005E436B /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7BE2AA05D15005E436B /* UserDefaultsService.swift */; };
+		FAAAD7C12AA05E8B005E436B /* UserDefaultsExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7C02AA05E8B005E436B /* UserDefaultsExtentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FA8D70AC2A9D52EE00FFDD69 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FA8D70AE2A9D572800FFDD69 /* VerificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationsVC.swift; sourceTree = "<group>"; };
 		FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomVC.swift; sourceTree = "<group>"; };
+		FAAAD7BE2AA05D15005E436B /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		FAAAD7C02AA05E8B005E436B /* UserDefaultsExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4EB2A42A9AA7C3007CD829 /* UIViewControllerExt.swift */,
+				FAAAD7C02AA05E8B005E436B /* UserDefaultsExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8D70A92A9D06D800FFDD69 /* VerificationService.swift */,
+				FAAAD7BE2AA05D15005E436B /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAAD7BF2AA05D15005E436B /* UserDefaultsService.swift in Sources */,
 				FA4EB2A52A9AA7C3007CD829 /* UIViewControllerExt.swift in Sources */,
+				FAAAD7C12AA05E8B005E436B /* UserDefaultsExtentions.swift in Sources */,
 				FA8D70AD2A9D52EE00FFDD69 /* UserModel.swift in Sources */,
 				FA24E5572A981032009EC083 /* CreateAccaountVC.swift in Sources */,
 				FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */,

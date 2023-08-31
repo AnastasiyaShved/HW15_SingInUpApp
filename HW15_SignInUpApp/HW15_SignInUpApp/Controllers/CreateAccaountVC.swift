@@ -34,7 +34,6 @@ class CreateAccaountVC: BaseViewController {
     private var passwordStrength: PasswordStrength = .veryWeak { didSet {updateContinieBtnState() } }
     private var secureBtnState = false
     private var confirnPassSecureBtnState = false
-    private let cach = UserDefaults.standard
     
     //MARK: - life circle -
     override func viewDidLoad() {
@@ -106,14 +105,7 @@ class CreateAccaountVC: BaseViewController {
             let userModel = UserModel(name: nameTF.text, email: email, pass: pass)
             performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
-        cach.setValue(emailTF.text, forKey: "Login")
-        cach.setValue(passwordTF.text, forKey: "Password")
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            let login = self.cach.string(forKey: "Login") ?? ""
-            let password = self.cach.string(forKey: "Password") ?? ""
-            print("login: \(login) with password: \(password)")
-        }
     }
     
     
