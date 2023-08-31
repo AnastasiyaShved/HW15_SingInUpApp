@@ -13,34 +13,51 @@ class SignInVC: BaseViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var errorLbl: UILabel! {
-        didSet {
-            errorLbl.isHidden = true
-        }
+        didSet { errorLbl.isHidden = true }
     }
     @IBOutlet weak var signBtn: UIButton!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        if let _ = UserDefaultsService.getUserModel() {
+            goToTabBarController()
+        }
+            
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        emailTF.text = ""
+        passwordTF.text = ""
+    }
+    
+    @IBAction func signInAction() {
+        errorLbl.isHidden = true
+        guard let email = emailTF.text,
+              let pass = passwordTF.text,
+              let userModel = UserDefaultsService.getUserModel(),
+              email == userModel.email,
+              pass == userModel.pass
+        else {
+                errorLbl.isHidden = false
+                return
+        }
+        goToTabBarController()
+    }
         
+       
+        private func setupUI() {
+    //        signBtn.isEnabled = false
+        }
+       
+        private func goToTabBarController() {
+            let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
-    private func setupUI() {
-        signBtn.isEnabled = false
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+    
+    
+    
+    
+

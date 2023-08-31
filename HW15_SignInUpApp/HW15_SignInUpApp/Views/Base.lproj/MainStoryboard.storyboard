@@ -11,12 +11,50 @@
         <!--profile-->
         <scene sceneID="7cy-gQ-0tH">
             <objects>
-                <viewController id="ug2-z7-xRy" sceneMemberID="viewController">
+                <viewController id="ug2-z7-xRy" customClass="ProfileVC" customModule="HW15_SignInUpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lti-8D-d30">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-WM-WVQ">
+                                <rect key="frame" x="77.5" y="122" width="165.5" height="187"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58n-Ln-djL">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="31"/>
+                                        <color key="tintColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Chenge User Account"/>
+                                        <connections>
+                                            <segue destination="XiQ-AQ-G1a" kind="show" id="Cyt-66-wno"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vah-aY-Skh">
+                                        <rect key="frame" x="21" y="78" width="123" height="31"/>
+                                        <color key="tintColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Delete Account"/>
+                                        <connections>
+                                            <action selector="deleteAccountAction" destination="ug2-z7-xRy" eventType="touchUpInside" id="zgW-LO-DPS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAd-wX-HeX">
+                                        <rect key="frame" x="46.5" y="156" width="72" height="31"/>
+                                        <color key="tintColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="LogOut"/>
+                                        <connections>
+                                            <action selector="logOutAction" destination="ug2-z7-xRy" eventType="touchUpInside" id="NSn-rq-wnx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="L9Z-Uf-ZQY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1360234173" green="0.27756757980000002" blue="0.43689781729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oLc-WM-WVQ" firstAttribute="centerY" secondItem="L9Z-Uf-ZQY" secondAttribute="centerY" id="nRS-aC-Oc1"/>
+                            <constraint firstItem="oLc-WM-WVQ" firstAttribute="centerX" secondItem="L9Z-Uf-ZQY" secondAttribute="centerX" id="siB-Su-1fA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="profile" image="person.crop.circle.fill" catalog="system" id="CMw-Rf-XoH"/>
                 </viewController>
@@ -43,7 +81,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="m5c-8K-ety">
             <objects>
-                <tabBarController id="Hv4-0U-HgN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hv4-0U-HgN" customClass="TabBarController" customModule="HW15_SignInUpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yIi-II-lZD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,6 +95,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGu-gK-ipV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-954" y="-484"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UVW-9t-1Sf">
+            <objects>
+                <viewController id="XiQ-AQ-G1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sid-5n-aGw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TvM-eR-dxP"/>
+                        <color key="backgroundColor" red="0.1360234173" green="0.27756757980000002" blue="0.43689781729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0LI-xg-cJl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2f-N6-8TT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="-201"/>
         </scene>
     </scenes>
     <resources>

@@ -23,6 +23,8 @@
 		FA8D70B12A9D70F400FFDD69 /* WelcomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */; };
 		FAAAD7BF2AA05D15005E436B /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7BE2AA05D15005E436B /* UserDefaultsService.swift */; };
 		FAAAD7C12AA05E8B005E436B /* UserDefaultsExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7C02AA05E8B005E436B /* UserDefaultsExtentions.swift */; };
+		FAAAD7C32AA10444005E436B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7C22AA10444005E436B /* TabBarController.swift */; };
+		FAAAD7C72AA12396005E436B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAD7C62AA12396005E436B /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomVC.swift; sourceTree = "<group>"; };
 		FAAAD7BE2AA05D15005E436B /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		FAAAD7C02AA05E8B005E436B /* UserDefaultsExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtentions.swift; sourceTree = "<group>"; };
+		FAAAD7C22AA10444005E436B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FAAAD7C62AA12396005E436B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				FA24E5562A981032009EC083 /* CreateAccaountVC.swift */,
 				FA8D70AE2A9D572800FFDD69 /* VerificationsVC.swift */,
 				FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */,
+				FAAAD7C22AA10444005E436B /* TabBarController.swift */,
+				FAAAD7C62AA12396005E436B /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 				FA8D70AA2A9D06D800FFDD69 /* VerificationService.swift in Sources */,
 				FA8D70B12A9D70F400FFDD69 /* WelcomVC.swift in Sources */,
 				FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */,
+				FAAAD7C72AA12396005E436B /* ProfileVC.swift in Sources */,
 				FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */,
+				FAAAD7C32AA10444005E436B /* TabBarController.swift in Sources */,
 				FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */,
 				FA8D70AF2A9D572800FFDD69 /* VerificationsVC.swift in Sources */,
 			);

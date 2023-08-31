@@ -30,6 +30,9 @@
                                 <color key="tintColor" red="0.56813666070000002" green="0.61431044810000002" blue="0.71606815219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Sing In"/>
+                                <connections>
+                                    <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ymL-Ns-N1t"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-Od-Gto">
                                 <rect key="frame" x="25" y="337.66666666666669" width="378" height="234.66666666666669"/>
