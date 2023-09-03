@@ -24,7 +24,7 @@ class WelcomVC: BaseViewController {
     
     @IBAction func continueAction() {
         guard let userModel = userModel else { return }
-        UserDefaultsService.saveUserMidel(userModel: userModel)
+        UserDefaultsService.saveUserModel(userModel: userModel)
         navigationController?.popToRootViewController(animated: true)
     }
     

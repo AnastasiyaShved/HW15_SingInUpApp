@@ -17,7 +17,7 @@ class ProfileVC: BaseViewController {
     }
     
     @IBAction func logOutAction() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController (animated: true)
     }
     
     

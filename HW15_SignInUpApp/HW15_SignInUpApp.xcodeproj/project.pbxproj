@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24E5542A97F71D009EC083 /* SignInVC.swift */; };
 		FA24E5572A981032009EC083 /* CreateAccaountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24E5562A981032009EC083 /* CreateAccaountVC.swift */; };
+		FA2B7D412AA4F4F100ED4E51 /* AppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B7D402AA4F4F100ED4E51 /* AppVC.swift */; };
+		FA2B7D432AA4FCF000ED4E51 /* ChangeUserAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B7D422AA4FCF000ED4E51 /* ChangeUserAccountVC.swift */; };
 		FA4EB2A52A9AA7C3007CD829 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EB2A42A9AA7C3007CD829 /* UIViewControllerExt.swift */; };
 		FA880E4C2A975D60006AC1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880E4B2A975D60006AC1BC /* AppDelegate.swift */; };
 		FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880E4D2A975D60006AC1BC /* SceneDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		FA24E5542A97F71D009EC083 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		FA24E5562A981032009EC083 /* CreateAccaountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccaountVC.swift; sourceTree = "<group>"; };
+		FA2B7D402AA4F4F100ED4E51 /* AppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVC.swift; sourceTree = "<group>"; };
+		FA2B7D422AA4FCF000ED4E51 /* ChangeUserAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserAccountVC.swift; sourceTree = "<group>"; };
 		FA4EB2A42A9AA7C3007CD829 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		FA880E482A975D60006AC1BC /* HW15_SignInUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW15_SignInUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA880E4B2A975D60006AC1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				FA8D70B02A9D70F400FFDD69 /* WelcomVC.swift */,
 				FAAAD7C22AA10444005E436B /* TabBarController.swift */,
 				FAAAD7C62AA12396005E436B /* ProfileVC.swift */,
+				FA2B7D402AA4F4F100ED4E51 /* AppVC.swift */,
+				FA2B7D422AA4FCF000ED4E51 /* ChangeUserAccountVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2B7D432AA4FCF000ED4E51 /* ChangeUserAccountVC.swift in Sources */,
 				FAAAD7BF2AA05D15005E436B /* UserDefaultsService.swift in Sources */,
 				FA4EB2A52A9AA7C3007CD829 /* UIViewControllerExt.swift in Sources */,
 				FAAAD7C12AA05E8B005E436B /* UserDefaultsExtentions.swift in Sources */,
@@ -236,6 +243,7 @@
 				FA880E4E2A975D60006AC1BC /* SceneDelegate.swift in Sources */,
 				FAAAD7C32AA10444005E436B /* TabBarController.swift in Sources */,
 				FA24E5552A97F71D009EC083 /* SignInVC.swift in Sources */,
+				FA2B7D412AA4F4F100ED4E51 /* AppVC.swift in Sources */,
 				FA8D70AF2A9D572800FFDD69 /* VerificationsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

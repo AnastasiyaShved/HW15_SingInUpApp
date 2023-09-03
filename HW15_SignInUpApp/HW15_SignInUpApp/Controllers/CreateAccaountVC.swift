@@ -12,22 +12,15 @@ class CreateAccaountVC: BaseViewController {
     //MARK: - Property -
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var errorEmailLbl: UILabel!
-
     @IBOutlet weak var nameTF: UITextField!
-    
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var errorPassLbl: UILabel!
-    
-    
     @IBOutlet var strongPasswordIndView: [UIView]!
-    
     @IBOutlet weak var comfirnPasswordTF: UITextField!
     @IBOutlet weak var errorConfirnPasswordLbl: UILabel!
-
     @IBOutlet weak var continueBtn: UIButton!
-
     @IBOutlet weak var scrolView: UIScrollView!
-
+    
     //MARK: - private prorety -
     private var isValidEmail = false { didSet {updateContinieBtnState() } }
     private var isConfirnPassword = false { didSet {updateContinieBtnState() } }

@@ -8,7 +8,7 @@
 import Foundation
 
 final class UserDefaultsService {
-    static func  saveUserMidel(userModel: UserModel) {
+    static func  saveUserModel(userModel: UserModel) {
         UserDefaults.standard.set(userModel.name, forKey: UserDefaults.Keys.name.rawValue)
         UserDefaults.standard.set(userModel.email, forKey: UserDefaults.Keys.email.rawValue)
         UserDefaults.standard.set(userModel.pass, forKey: UserDefaults.Keys.password.rawValue)
