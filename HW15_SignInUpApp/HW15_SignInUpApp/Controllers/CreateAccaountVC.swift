@@ -47,7 +47,6 @@ class CreateAccaountVC: BaseViewController {
             isValidEmail = true
         } else {
             isValidEmail = false
-           
         }
         errorEmailLbl.isHidden = isValidEmail
     }
@@ -85,12 +84,9 @@ class CreateAccaountVC: BaseViewController {
         confirnPassSecureBtnState.toggle()
     }
     
-
-    
     @IBAction func signInTab() {
         navigationController?.popToRootViewController(animated: true)
     }
-    
     
     @IBAction func continueAct() {
         if let email = emailTF.text,
@@ -98,9 +94,7 @@ class CreateAccaountVC: BaseViewController {
             let userModel = UserModel(name: nameTF.text, email: email, pass: pass)
             performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
-        
     }
-    
     
     //MARK: - private funcs -
     private func setupStrongIndicatorsView() {
@@ -110,7 +104,6 @@ class CreateAccaountVC: BaseViewController {
             } else {
                 view.alpha = 0.2
             }
-
         }
     }
     
@@ -125,9 +118,8 @@ class CreateAccaountVC: BaseViewController {
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
         
         let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
         
@@ -136,15 +128,15 @@ class CreateAccaountVC: BaseViewController {
     }
         
     @objc private func keyboardWillHide() {
-            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-            scrolView.contentInset = contentInsets
-            scrolView.scrollIndicatorInsets = contentInsets
-        }
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        scrolView.contentInset = contentInsets
+        scrolView.scrollIndicatorInsets = contentInsets
+    }
     
     //MARK: - novigation -
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let destVC = segue.destination as? VerificationsVC,
-                  let userModel = sender as? UserModel else { return }
-            destVC.userModel = userModel
-        }
+        guard let destVC = segue.destination as? VerificationsVC,
+              let userModel = sender as? UserModel else { return }
+        destVC.userModel = userModel
+    }
 }

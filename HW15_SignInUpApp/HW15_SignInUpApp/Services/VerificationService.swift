@@ -22,7 +22,7 @@ class VerificationService {
     static let notVeryStrongRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$"
     static let strongRegex        = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%*?&#])[A-Za-z\\dd$@$!%*?&#]{8,}"
     
-    static func isValidPassword(pass: String) -> PasswordStrength {                                             //  swich case
+    static func isValidPassword(pass: String) -> PasswordStrength {
         if NSPredicate(format: "SELF MATCHES %@", strongRegex).evaluate(with: pass) {
             return .strong
         } else if NSPredicate(format: "SELF MATCHES %@", notVeryStrongRegex).evaluate(with: pass) {
@@ -35,18 +35,6 @@ class VerificationService {
             return .veryWeak
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     static func  isValidEmail (email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

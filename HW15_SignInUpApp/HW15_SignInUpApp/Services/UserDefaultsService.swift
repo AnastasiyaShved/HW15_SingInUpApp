@@ -8,6 +8,7 @@
 import Foundation
 
 final class UserDefaultsService {
+    
     static func  saveUserModel(userModel: UserModel) {
         UserDefaults.standard.set(userModel.name, forKey: UserDefaults.Keys.name.rawValue)
         UserDefaults.standard.set(userModel.email, forKey: UserDefaults.Keys.email.rawValue)
@@ -18,13 +19,12 @@ final class UserDefaultsService {
         let name = UserDefaults.standard.string(forKey: UserDefaults.Keys.name.rawValue)
         
         guard let email = UserDefaults.standard.string(forKey: UserDefaults.Keys.email.rawValue),
-              let pass = UserDefaults.standard.string(forKey: UserDefaults.Keys.password.rawValue) else
-        {
-            return nil
-        }
+              let pass = UserDefaults.standard.string(forKey: UserDefaults.Keys.password.rawValue) else { return nil }
+        
         let userModel = UserModel(name: name, email: email, pass: pass)
-            return userModel
+        return userModel
     }
+    
     static func cleanUserDefoult() {
         UserDefaults.standard.resert()
     }

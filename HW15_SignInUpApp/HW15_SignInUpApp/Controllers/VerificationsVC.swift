@@ -12,7 +12,6 @@ class VerificationsVC: BaseViewController {
     var userModel: UserModel?
     let randomInt = Int.random(in: 100000 ... 999999)
     var sleepTime = 3
-   
     
     @IBOutlet weak var InfoTextLbl: UILabel!
     @IBOutlet weak var codeTF: UITextField!
@@ -28,7 +27,8 @@ class VerificationsVC: BaseViewController {
     
     @IBAction func codeTFAction(_ sender: UITextField) {
         errorCodeLbl.isHidden = true
-        guard let text = sender.text, !text.isEmpty, text == randomInt.description else {
+        guard let text = sender.text, !text.isEmpty, text == randomInt.description
+        else {
             errorCodeLbl.isHidden = false
             sender.isUserInteractionEnabled = false
             errorCodeLbl.text = "Error code. Please wait \(sleepTime) seconds"
@@ -36,22 +36,20 @@ class VerificationsVC: BaseViewController {
             let dispatcAfter = DispatchTimeInterval.seconds(sleepTime)
             let deadline = DispatchTime.now() + dispatcAfter
             DispatchQueue.main.asyncAfter(deadline: deadline) {
-            sender.isUserInteractionEnabled = true
-            self.errorCodeLbl.isHidden = true
-            self.sleepTime *= 2
+                sender.isUserInteractionEnabled = true
+                self.errorCodeLbl.isHidden = true
+                self.sleepTime *= 2
             }
-            return
+        return
         }
         performSegue(withIdentifier: "goToWelcomeScreen", sender: nil)
     }
-    
-
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    
     @objc private func keyboardWillShow(notification: Notification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         cenetrConstraint.constant -= keyboardSize.height / 2

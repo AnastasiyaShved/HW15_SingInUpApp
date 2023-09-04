@@ -9,8 +9,6 @@ import UIKit
 
 class WelcomVC: BaseViewController {
    
-    
-    
     @IBOutlet weak var infoLbl: UILabel!
     
     var userModel: UserModel?
@@ -18,9 +16,7 @@ class WelcomVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
     }
-    
     
     @IBAction func continueAction() {
         guard let userModel = userModel else { return }
@@ -28,10 +24,7 @@ class WelcomVC: BaseViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
-
     private func setupUI() {
         infoLbl.text = "\(userModel?.name ?? "") to our Cool App"
     }
-
 }

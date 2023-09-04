@@ -8,6 +8,7 @@
 import Foundation
 
 extension UserDefaults {
+    
     enum Keys: String, CaseIterable {
         case email
         case name

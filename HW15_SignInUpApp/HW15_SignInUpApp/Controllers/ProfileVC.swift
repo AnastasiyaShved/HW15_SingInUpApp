@@ -9,8 +9,6 @@ import UIKit
 
 class ProfileVC: BaseViewController {
 
-    
-    
     @IBAction func deleteAccountAction() {
         UserDefaultsService.cleanUserDefoult()
         navigationController?.popToRootViewController(animated: true)
@@ -18,8 +16,6 @@ class ProfileVC: BaseViewController {
     
     @IBAction func logOutAction() {
         navigationController?.popToRootViewController (animated: true)
-    }
-    
-    
-    }
+    }        
+}
     

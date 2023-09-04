@@ -10,52 +10,30 @@ import UIKit
 class ChangeUserAccountVC: BaseViewController {
 
     //MARK: - property -
-    
     @IBOutlet weak var newNameTF: UITextField!
     @IBOutlet weak var newEmailTF: UITextField!
     @IBOutlet weak var newPassFT: UITextField!
     @IBOutlet weak var newConfinmPassTF: UITextField!
-    
     @IBOutlet weak var errorBadEmailLbl: UILabel!
     @IBOutlet weak var errorWeakPasswordLbl: UILabel!
     @IBOutlet weak var errorNotConfirmPassLbl: UILabel!
     
-    
-    
     //MARK: - private prorety -
-    
     private var isValidNewEmail = false
     private var isValidNewPassword = false
     private var newPasswordStrength: PasswordStrength = .veryWeak
     private var isConfirnNewPassword = false
     
-    
-    //MARK: - life circle -
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-    
     //MARK: - actions -
-    
-
     @IBAction func newEmailAction(_ sender: UITextField) {
         if let newEmail = sender.text,
            VerificationService.isValidEmail(email: newEmail) {
             isValidNewEmail = true
         } else {
             isValidNewEmail = false
-
         }
         errorBadEmailLbl.isHidden = isValidNewEmail
     }
-    
-
-            
-    
-    
     
     @IBAction func newPasswordAction(_ sender: UITextField) {
         if let newPassword = sender.text {
@@ -66,11 +44,7 @@ class ChangeUserAccountVC: BaseViewController {
         errorWeakPasswordLbl.isHidden = newPasswordStrength != .veryWeak
     }
     
-    
-    
-    
     @IBAction func confirmPassAction(_ sender: UITextField) {
-        
         if let confirmNewPass = sender.text,
            !confirmNewPass.isEmpty,
            let newpassword = newPassFT.text,
@@ -82,39 +56,21 @@ class ChangeUserAccountVC: BaseViewController {
         errorNotConfirmPassLbl.isHidden = isConfirnNewPassword
     }
         
-
-    
-
-    
     @IBAction func saveNewDataAction(_ sender: UIButton) {
-        guard let newName = newNameTF.text,
-              let newEmail = newEmailTF.text,
-              let newPass = newPassFT.text
-        else { return }
+        guard var user = UserDefaultsService.getUserModel() else { return }
+        if let newName = newNameTF.text, !newName.isEmpty {
+            user.name = newName
+        }
+
+        if let newEmail = newEmailTF.text, !newEmail.isEmpty {
+            user.email = newEmail
+        }
         
-        let newUserData = UserModel(name: newName, email: newEmail, pass: newPass)
-        UserDefaultsService.saveUserModel(userModel: newUserData)
+        if let newPass = newPassFT.text, !newPass.isEmpty {
+            user.pass = newPass
+        }
+        
+        UserDefaultsService.saveUserModel(userModel: user)
         navigationController?.popViewController(animated: true)
     }
-    
-    
-    //MARK: - private funcs -
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

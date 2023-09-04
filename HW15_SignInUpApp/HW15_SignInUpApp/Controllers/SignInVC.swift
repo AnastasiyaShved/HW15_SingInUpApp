@@ -8,7 +8,6 @@
 import UIKit
 
 class SignInVC: BaseViewController {
-
     
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -19,11 +18,9 @@ class SignInVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         if let _ = UserDefaultsService.getUserModel() {
             goToTabBarController()
         }
-            
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,20 +36,16 @@ class SignInVC: BaseViewController {
               email == userModel.email,
               pass == userModel.pass
         else {
-                errorLbl.isHidden = false
-                return
+            errorLbl.isHidden = false
+            return
         }
         goToTabBarController()
     }
-        
-       
-        private func setupUI() {
-    //        signBtn.isEnabled = false
-        }
-       
-        private func goToTabBarController() {
-            let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-            guard let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+    
+    private func goToTabBarController() {
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController
+        else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
 }

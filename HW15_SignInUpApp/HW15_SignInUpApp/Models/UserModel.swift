@@ -6,8 +6,9 @@
 //
 
 import Foundation
+
 struct UserModel {
-    let name: String?
-    let email: String
-    let pass: String
+    var name: String?
+    var email: String
+    var pass: String
 }

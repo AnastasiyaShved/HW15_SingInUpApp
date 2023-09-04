@@ -55,7 +55,9 @@
                             <constraint firstItem="oLc-WM-WVQ" firstAttribute="centerX" secondItem="L9Z-Uf-ZQY" secondAttribute="centerX" id="siB-Su-1fA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="profile" image="person.crop.circle.fill" catalog="system" id="CMw-Rf-XoH"/>
+                    <tabBarItem key="tabBarItem" title="profile" image="person.crop.circle.fill" catalog="system" id="CMw-Rf-XoH">
+                        <color key="badgeColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zl0-C2-HYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +114,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.94525657559999998" green="0.95354116909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Mpm-L3-A7e" kind="relationship" relationship="viewControllers" id="9q0-m4-rDF"/>
